@@ -1,6 +1,6 @@
-local colours = {}
+local colors = {}
 
-colours.named_colours = {
+colors.named_colors = {
 	canopy_20 = "#5d6f44",
 	canopy_40 = "#839b5f",
 	canopy_60 = "#b2c29b",
@@ -40,9 +40,9 @@ colours.named_colours = {
 	lorikeet_y_70 = "#fef769",
 }
 
-local c = colours.named_colours
+local c = colors.named_colors
 
-colours.semantic_colours = {
+colors.semantic_colors = {
 	bg = c.shadow_10,
 	fg = c.canopy_60,
 
@@ -76,4 +76,4 @@ colours.semantic_colours = {
 	diff = c.lorikeet_y_50,
 }
 
-return colours
+return colors

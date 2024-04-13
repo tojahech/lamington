@@ -1,5 +1,5 @@
-local c = require("lamington.colours").named_colours
-local s = require("lamington.colours").semantic_colours
+local c = require("lamington.colors").named_colors
+local s = require("lamington.colors").semantic_colors
 
 return {
 
@@ -43,9 +43,9 @@ return {
 	LineNr = { fg = c.soil_70 }, -- Line number column
 	SignColumn = { fg = c.soil_70 }, -- Column where signs are displayed
 	EndOfBuffer = { fg = "NONE", bg = "NONE" }, -- ~ lines at the end of a buffer
-	ColorColumn = { bg = c.soil_70 }, -- Colour for columns highlighted with cc
+	ColorColumn = { bg = c.soil_70 }, -- color for columns highlighted with cc
 
-	Folded = { fg = c.canopy_60, bg = c.foilage_30 }, -- Line colour for collapsed folds
+	Folded = { fg = c.canopy_60, bg = c.foilage_30 }, -- Line color for collapsed folds
 	FoldColumn = { fg = c.canopy_60, bg = c.foilage_30 }, -- Column in the sign column used for fold markers
 
 	--

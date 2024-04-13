@@ -1,3 +1,3 @@
-# Lamington colour scheme
+# Lamington color scheme
 
-A lush green colourscheme for Neovim inspired by the rainforests of south-east Queensland. 
+A lush green colorscheme for Neovim inspired by the rainforests of south-east Queensland. 

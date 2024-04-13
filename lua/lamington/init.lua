@@ -1,12 +1,12 @@
 local M = {}
 
 M.load = function()
-	-- Reset colours
+	-- Reset colors
 	if vim.g.colors_name then
 		vim.cmd.hi("clear")
 	end
 
-	-- Specify colourscheme
+	-- Specify colorscheme
 	vim.g.colors_name = "lamington"
 
 	-- Set highlight groups
