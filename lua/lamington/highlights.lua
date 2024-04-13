@@ -260,7 +260,7 @@ return {
 	-- copilot
 	--
 
-	CopilotLabel = { fg = c.soil_70 },
+	CopilotLabel = { fg = c.waterfalls_60 },
 	CopilotAnnotation = { link = "CopilotLabel" },
 	CopilotSuggestion = { link = "CopilotLabel" },
 
