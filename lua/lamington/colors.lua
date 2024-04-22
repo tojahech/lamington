@@ -9,6 +9,7 @@ colors.named_colors = {
 	shadow_10 = "#1e1c1b",
 	shadow_20 = "#211e1d",
 	shadow_30 = "#2e2b29",
+	shadow_40 = "#3f3734",
 
 	foilage_30 = "#456d2d",
 	foilage_50 = "#6aa744",
@@ -54,6 +55,13 @@ colors.semantic_colors = {
 
 	text_shadow = c.soil_70,
 	text_shadower = c.soil_50,
+
+	-- Subtle test that should fade into the background (of the standard background)
+	shadow_text = c.soil_50,
+
+	-- scaffolding elements like borders, dividers, etc.
+	scaffold = c.soil_70,
+	scaffold_dark = c.soil_50,
 
 	text_dark = c.canopy_20,
 	text_darker = c.canopy_20,

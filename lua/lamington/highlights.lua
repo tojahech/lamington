@@ -37,13 +37,13 @@ return {
 
 	Visual = { fg = c.foilage_70, bg = c.foilage_30 }, -- Visual mode selection
 
-	VertSplit = { fg = c.soil_70 }, -- Separator between vertical splits
-	WinSeparator = { fg = c.soil_70 }, -- Separator between horizontal splits
+	VertSplit = { fg = s.scaffold }, -- Separator between vertical splits
+	WinSeparator = { fg = s.scaffold }, -- Separator between horizontal splits
 
-	LineNr = { fg = c.soil_70 }, -- Line number column
-	SignColumn = { fg = c.soil_70 }, -- Column where signs are displayed
+	LineNr = { fg = s.scaffold }, -- Line number column
+	SignColumn = { link = "LineNr" }, -- Column where signs are displayed
 	EndOfBuffer = { fg = "NONE", bg = "NONE" }, -- ~ lines at the end of a buffer
-	ColorColumn = { bg = c.soil_70 }, -- color for columns highlighted with cc
+	ColorColumn = { link = "LineNr" }, -- color for columns highlighted with cc
 
 	Folded = { fg = c.canopy_60, bg = c.foilage_30 }, -- Line color for collapsed folds
 	FoldColumn = { fg = c.canopy_60, bg = c.foilage_30 }, -- Column in the sign column used for fold markers
@@ -113,6 +113,7 @@ return {
 	Boolean = { fg = c.canopy_60 },
 
 	Identifier = { link = "Normal" },
+	Parameter = { fg = c.canopy_40, italic = true },
 
 	Function = { fg = c.canopy_40, bold = true },
 
@@ -130,7 +131,7 @@ return {
 	-- Macro = { fg = c["ma"], bg = "NONE" },
 	-- PreCondit = { fg = c["ma"], bg = "NONE" },
 
-	Type = { fg = c.waterfalls_60 },
+	Type = { fg = c.canopy_60, bold = true },
 	Typedef = { link = "Type" },
 	Structure = { fg = c.sunray_60 },
 
@@ -170,7 +171,7 @@ return {
 
 	["@variable"] = { link = "Identfier" },
 	-- ["@variable.builtin"] = { link = "Normal" },
-	["@variable.parameter"] = { link = "Keyword" },
+	["@variable.parameter"] = { link = "Parameter" },
 	-- ["@variable.parameter.builtin"] = { link = "Normal" },
 	-- ["@variable.member"] = { link = "Normal" },
 	["@function"] = { link = "Function" },
@@ -268,9 +269,9 @@ return {
 	-- Indent Blankline
 	--
 
-	IblWhitespace = { fg = c.soil_50 },
-	IblIndent = { fg = c.soil_50 },
-	IblScope = { fg = c.soil_50 },
+	IblWhitespace = { fg = s.scaffold_dark },
+	IblIndent = { link = "IblWhitespace" },
+	IblScope = { link = "IblWhitespace" },
 
 	--
 	-- Telescope
@@ -298,7 +299,7 @@ return {
 	GitSignsAdd = { link = "DiffAdd" },
 	GitSignsChange = { link = "DiffChange" },
 	GitSignsDelete = { link = "DiffDelete" },
-	GitSignsCurrentLineBlame = { fg = c.soil_70 },
+	GitSignsCurrentLineBlame = { fg = s.shadow_text },
 
 	--
 	-- diff
@@ -331,10 +332,10 @@ return {
 	DiagnosticSignInfo = { fg = s.info },
 	DiagnosticSignHint = { fg = s.hint },
 
-	DiagnosticVirtualTextError = { fg = c.soil_70 },
-	DiagnosticVirtualTextWarn = { fg = c.soil_70 },
-	DiagnosticVirtualTextInfo = { fg = c.soil_70 },
-	DiagnosticVirtualTextHint = { fg = c.soil_70 },
+	DiagnosticVirtualTextError = { fg = s.shadow_text },
+	DiagnosticVirtualTextWarn = { fg = s.shadow_text },
+	DiagnosticVirtualTextInfo = { fg = s.shadow_text },
+	DiagnosticVirtualTextHint = { fg = s.shadow_text },
 
 	DiagnosticUnderlineError = { undercurl = true, sp = s.error },
 	DiagnosticUnderlineWarn = { undercurl = true, sp = s.warning },
