@@ -44,41 +44,42 @@ colors.named_colors = {
 local c = colors.named_colors
 
 colors.semantic_colors = {
+
+	-- main text and background
 	bg = c.shadow_10,
 	fg = c.canopy_60,
 
+	-- modified text and background for modal-like elements
 	bg_modal = c.shadow_30,
 	fg_modal = c.canopy_40,
 
-	bg_select = c.foilage_30,
-	fg_select = c.foilage_70,
+	-- modified text and background for selected or focused elements
+	bg_selection = c.foilage_30,
+	fg_selection = c.foilage_70,
 
-	text_shadow = c.soil_70,
-	text_shadower = c.soil_50,
-
-	-- Subtle test that should fade into the background (of the standard background)
-	shadow_text = c.soil_50,
-
-	-- scaffolding elements like borders, dividers, etc.
-	scaffold = c.soil_70,
-	scaffold_dark = c.soil_50,
-
-	text_dark = c.canopy_20,
-	text_darker = c.canopy_20,
-	text_light = c.canopy_60,
-	text_lighter = c.canopy_80,
-
+	-- highlight elements that should stand out, in rough order of visual weight
 	highlight_1 = c.waterfalls_60,
 	highlight_2 = c.canopy_40,
 	highlight_3 = c.sunray_60,
 	highlight_4 = c.foilage_70,
 
+	-- elements that should fade into the background (in the context of the main fg/bg)
+	fade_1 = c.soil_50,
+	fade_2 = c.soil_50,
+	fade_3 = c.soil_50,
+
+	-- visual scaffolding like borders, dividers, etc.
+	scaffold = c.soil_70,
+	scaffold_dark = c.soil_50,
+
+	-- colors to indicate status
 	ok = c.lorikeet_g_70,
 	error = c.lorikeet_r_70,
 	warning = c.lorikeet_o_70,
 	info = c.lorikeet_y_70,
 	hint = c.lorikeet_b_70,
 
+	-- colors to indicate change
 	plus = c.lorikeet_g_50,
 	minus = c.lorikeet_r_50,
 	diff = c.lorikeet_y_50,

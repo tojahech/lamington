@@ -299,7 +299,7 @@ return {
 	GitSignsAdd = { link = "DiffAdd" },
 	GitSignsChange = { link = "DiffChange" },
 	GitSignsDelete = { link = "DiffDelete" },
-	GitSignsCurrentLineBlame = { fg = s.shadow_text },
+	GitSignsCurrentLineBlame = { fg = s.fade_1 },
 
 	--
 	-- diff
@@ -332,10 +332,10 @@ return {
 	DiagnosticSignInfo = { fg = s.info },
 	DiagnosticSignHint = { fg = s.hint },
 
-	DiagnosticVirtualTextError = { fg = s.shadow_text },
-	DiagnosticVirtualTextWarn = { fg = s.shadow_text },
-	DiagnosticVirtualTextInfo = { fg = s.shadow_text },
-	DiagnosticVirtualTextHint = { fg = s.shadow_text },
+	DiagnosticVirtualTextError = { fg = s.fade_1 },
+	DiagnosticVirtualTextWarn = { fg = s.fade_1 },
+	DiagnosticVirtualTextInfo = { fg = s.fade_1 },
+	DiagnosticVirtualTextHint = { fg = s.fade_1 },
 
 	DiagnosticUnderlineError = { undercurl = true, sp = s.error },
 	DiagnosticUnderlineWarn = { undercurl = true, sp = s.warning },
