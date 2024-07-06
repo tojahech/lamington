@@ -45,44 +45,50 @@ local c = colors.named_colors
 
 colors.semantic_colors = {
 
-	-- main text and background
-	bg = c.shadow_10,
-	fg = c.canopy_60,
+	-- primary text and background
+	bg = c.shadow_20,
+	fg = c.canopy_40,
 
-	-- modified text and background for modal-like elements
+	-- secondary text and background, used for surrounding elements like menus, sidebars, panels, etc
+	bg_alt = c.shadow_10,
+	fg_alt = c.canopy_20,
+
+	-- alternative text and background, used for floating elements like pop-ups, dialogues and modals
 	bg_modal = c.shadow_30,
 	fg_modal = c.canopy_40,
 
-	-- modified text and background for selected or focused elements
-	bg_selection = c.foilage_30,
-	fg_selection = c.foilage_70,
+	-- alternative text and background, used for selected or focused elements
+	bg_selection = c.canopy_60,
+	fg_selection = c.canopy_20,
 
-	-- highlight elements that should stand out, in rough order of visual weight
-	highlight_1 = c.waterfalls_60,
-	highlight_2 = c.canopy_40,
+	-- highlight elements and text that should stand out
+	highlight_1 = c.canopy_60,
+	highlight_2 = c.waterfalls_60,
 	highlight_3 = c.sunray_60,
-	highlight_4 = c.foilage_70,
+	highlight_4 = c.foilage_50,
 
-	-- elements that should fade into the background (in the context of the main fg/bg)
-	fade_1 = c.soil_50,
+	-- de-emphasise elements and text that should fade into the background
+	fade_1 = c.canopy_20,
 	fade_2 = c.soil_50,
-	fade_3 = c.soil_50,
+	fade_3 = c.waterfalls_60,
 
 	-- visual scaffolding like borders, dividers, etc.
 	scaffold = c.soil_70,
 	scaffold_dark = c.soil_50,
+	scaffold_3 = c.shadow_30,
 
-	-- colors to indicate status
+	-- status indicators
 	ok = c.lorikeet_g_70,
 	error = c.lorikeet_r_70,
 	warning = c.lorikeet_o_70,
 	info = c.lorikeet_y_70,
 	hint = c.lorikeet_b_70,
 
-	-- colors to indicate change
+	-- change indicators
 	plus = c.lorikeet_g_50,
 	minus = c.lorikeet_r_50,
 	diff = c.lorikeet_y_50,
+	same = c.lorikeet_b_70,
 }
 
 return colors

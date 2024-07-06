@@ -7,27 +7,23 @@ return {
 	-- Text
 	--
 
-	Normal = { fg = c.canopy_40, bg = c.shadow_20 }, -- Normal text
-	NormalNC = { bg = c.shadow_10 }, -- Normal text in inactive windows
-	Title = { fg = c.canopy_60 }, -- Titles for things like the help window, autocomplete box, etc.
+	Normal = { fg = s.fg, bg = s.bg }, -- Normal text
+	NormalNC = { bg = s.bg_alt }, -- Normal text in inactive windows
+	Title = { fg = s.fg_alt }, -- Titles for things like the help window, autocomplete box, etc.
 	Underlined = { underline = true }, -- Meta, underlined text
 	Bold = { bold = true }, -- Meta, bold text
 	Italic = { italic = true }, -- Meta, italic text
-	NonText = { fg = c.canopy_20 }, -- Characters that don't really exist like soft linebreaks
-	Conceal = { fg = c.canopy_60 }, -- Placeholder characters substituted for concealed text
+	NonText = { fg = s.fade_1 }, -- Characters that don't really exist like soft linebreaks
+	Conceal = { fg = s.fade_2 }, -- Placeholder characters substituted for concealed text
 
 	--
 	-- Selections
 	--
 
-	Cursor = { fg = c.canopy_20, bg = c.canopy_60 }, -- Highlights current cursor position
-	-- CurSearch = {} -- Search pattern under cursor
-	-- CursorLineNr = { fg = c.soil_70 }, -- Highlight line number of cursor
-	-- CursorLine   = { theme.none, theme.bg1 }, -- Highlight line of cursor when `cursorline` set
-	-- CursorColumn = { theme.none, theme.bg1 }, -- Highlight column of cursor when `cursorline` set
+	Cursor = { fg = s.fg_selection, bg = s.bg_selection }, -- Highlights current cursor position
 	MatchParen = { link = "Cursor" }, -- Parenthesis matching the one under the cursor
 
-	Search = { fg = c.foilage_70, bg = c.foilage_30 }, -- Last search pattern
+	Search = { fg = s.fg_selection, bg = s.bg_selection }, -- Last search pattern
 	IncSearch = { link = "Search" }, -- Search pattern as you type
 	Substitute = { link = "Search" }, -- Highlight for :s///c
 
@@ -35,7 +31,7 @@ return {
 	-- Structures
 	--
 
-	Visual = { fg = c.foilage_70, bg = c.foilage_30 }, -- Visual mode selection
+	Visual = { fg = s.fg_selection, bg = s.bg_selection }, -- Visual mode selection
 
 	VertSplit = { fg = s.scaffold }, -- Separator between vertical splits
 	WinSeparator = { fg = s.scaffold }, -- Separator between horizontal splits
@@ -45,49 +41,49 @@ return {
 	EndOfBuffer = { fg = "NONE", bg = "NONE" }, -- ~ lines at the end of a buffer
 	ColorColumn = { link = "LineNr" }, -- color for columns highlighted with cc
 
-	Folded = { fg = c.canopy_60, bg = c.foilage_30 }, -- Line color for collapsed folds
-	FoldColumn = { fg = c.canopy_60, bg = c.foilage_30 }, -- Column in the sign column used for fold markers
+	Folded = { fg = s.fg_alt, bg = s.bg_alt }, -- Line color for collapsed folds
+	FoldColumn = { fg = s.fg_alt, bg = s.bg_alt }, -- Column in the sign column used for fold markers
 
 	--
 	-- Interface
 	--
 
-	StatusLine = { fg = c.canopy_20, bg = c.shadow_10 }, -- Status line of current window
-	StatusLineNC = { fg = c.canopy_20, bg = c.shadow_10 }, -- Status line of non-current windows
+	StatusLine = { fg = s.fg_alt, bg = s.bg_alt }, -- Status line of current window
+	StatusLineNC = { fg = s.fg_alt, bg = s.bg_alt }, -- Status line of non-current windows
 
 	TabLine = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, inactive tabs
 	TabLineFill = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, empty space
 	TabLineSel = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, active tab
 
-	NormalFloat = { fg = c.canopy_40, bg = c.shadow_30 }, -- Normal text in floating windows
-	FloatBorder = { fg = c.shadow_30 }, -- Border of floating windows
-	FloatTitle = { fg = c.canopy_60 }, -- Title of floating windows
-	FloatFooter = { fg = c.canopy_60 }, -- Footer of floating windows
+	NormalFloat = { fg = s.fg_modal, bg = s.bg_modal }, -- Normal text in floating windows
+	FloatBorder = { fg = s.scaffold_3 }, -- Border of floating windows
+	FloatTitle = { fg = s.fg_selection }, -- Title of floating windows
+	FloatFooter = { fg = s.fg_selection }, -- Footer of floating windows
 
-	Pmenu = { fg = c.canopy_40, bg = c.shadow_30 }, -- popup menu normal item
-	PmenuSel = { fg = c.foilage_70, bg = c.foilage_30 }, -- popup menu selected item
-	PmenuSbar = { bg = c.shadow_30 }, -- popup menu scrollbar
-	PmenuThumb = { bg = c.canopy_60 }, -- Current location indicator in popup menus
+	Pmenu = { fg = s.fg_modal, bg = s.bg_modal }, -- popup menu normal item
+	PmenuSel = { fg = s.fg_selection, bg = s.bg_selection }, -- popup menu selected item
+	PmenuSbar = { bg = s.bg_modal }, -- popup menu scrollbar
+	PmenuThumb = { bg = s.bg_selection }, -- Current location indicator in popup menus
 
-	-- QuickFixLine = { theme.none, theme.bg1 }, -- Current line in the quickfix window
+	QuickFixLine = { fg = s.fg_selection, bg = s.bg_selection }, -- Current line in the quickfix window
 	Question = { fg = c.lorikeet_b_70 }, -- prompts and yes/no questions
-	Directory = { fg = c.canopy_20 }, -- Directory names
+	Directory = { fg = s.fg_alt, bg = s.bg_alt }, -- Directory names
 
 	--
 	-- Status and messages
 	--
 
-	Todo = { fg = c.lorikeet_b_70 },
-	Error = { fg = c.error },
-	Warning = { fg = c.lorikeet_y_70 },
-	Info = { fg = c.lorikeet_y_70 },
-	Debug = { fg = c.lorikeet_b_70 },
+	Todo = { fg = s.hint },
+	Error = { fg = s.error },
+	Warning = { fg = s.warning },
+	Info = { fg = s.info },
+	Debug = { fg = s.hint },
 
-	OkText = { fg = c.lorikeet_g_70 },
-	ErrorText = { fg = c.lorikeet_r_70 },
-	WarningText = { fg = c.lorikeet_o_70 },
-	InfoText = { fg = c.lorikeet_y_70 },
-	HintText = { fg = c.lorikeet_b_70 },
+	OkText = { fg = s.ok },
+	ErrorText = { fg = s.erro },
+	WarningText = { fg = s.warning },
+	InfoText = { fg = s.info },
+	HintText = { fg = s.hint },
 
 	ErrorMsg = { link = "Error" }, -- Error messages on the command line
 	WarningMsg = { link = "Warning" },
@@ -101,41 +97,41 @@ return {
 	-- Syntax highlighting
 	--
 
-	Comment = { fg = c.canopy_20, italic = true },
+	Comment = { fg = s.fade_1, italic = true },
 	SpecialComment = { bold = true },
 	-- Whitespace = {},
 
 	Constant = { link = "Normal" },
-	String = { fg = c.canopy_60 },
-	Character = { fg = c.canopy_60 },
-	Number = { fg = c.canopy_60 },
-	Float = { fg = c.canopy_60 },
-	Boolean = { fg = c.canopy_60 },
+	String = { fg = s.highlight_1 },
+	Character = { fg = s.highlight_1 },
+	Number = { fg = s.highlight_1 },
+	Float = { fg = s.highlight_1 },
+	Boolean = { fg = s.highlight_1 },
 
 	Identifier = { link = "Normal" },
-	Parameter = { fg = c.canopy_40, italic = true },
+	Parameter = { fg = s.fg, italic = true },
 
-	Function = { fg = c.canopy_40, bold = true },
+	Function = { fg = s.fg, bold = true },
 
-	Keyword = { fg = c.foilage_50, bold = true },
+	Keyword = { fg = s.highlight_4, bold = true },
 	Conditional = { link = "Keyword" },
 	Repeat = { link = "Keyword" },
 	Label = { link = "Keyword" },
 	Statement = { link = "Keyword" },
 	Exception = { link = "Keyword" },
-	Operator = { fg = c.foilage_50 },
+	Operator = { fg = s.highlight_4 },
 
-	PreProc = { fg = c.foilage_50 },
+	PreProc = { fg = s.highlight_4 },
 	-- Include = { fg = c["re"], bg = "NONE" },
 	-- Define = { fg = c["ma"], bg = "NONE" },
 	-- Macro = { fg = c["ma"], bg = "NONE" },
 	-- PreCondit = { fg = c["ma"], bg = "NONE" },
 
-	Type = { fg = c.canopy_60, bold = true },
+	Type = { fg = s.highlight_1, bold = true },
 	Typedef = { link = "Type" },
-	Structure = { fg = c.sunray_60 },
+	Structure = { fg = s.highlight_3 },
 
-	Special = { fg = c.foilage_50 },
+	Special = { fg = s.highlight_4 },
 	-- SpecialChar = { fg = c["ma"], bg = "NONE" },
 	-- Delimiter = { link = "Special" },
 
@@ -221,7 +217,7 @@ return {
 	-- ["@markup.strikethrough"] = { link = "Normal" },
 	-- ["@markup.underline"] = { link = "Underlined" },
 
-	["@markup.heading"] = { fg = s.highlight_1 },
+	["@markup.heading"] = { fg = s.highlight_2 },
 	-- ["@markup.heading.1"] = { link = "Normal" },
 	-- ["@markup.heading.2"] = { link = "Normal" },
 	-- ["@markup.heading.3"] = { link = "Normal" },
@@ -255,7 +251,7 @@ return {
 	-- Spellcheck
 	--
 
-	SpellBad = { sp = c.lorikeet_r_70, underline = true },
+	SpellBad = { sp = s.error, underline = true },
 	SpellCap = { link = "SpellBad" },
 	SpellLocal = { link = "SpellBad" },
 	SpellRare = { link = "SpellBad" },
@@ -264,7 +260,7 @@ return {
 	-- copilot
 	--
 
-	CopilotLabel = { fg = c.waterfalls_60 },
+	CopilotLabel = { fg = s.fade_3 },
 	CopilotAnnotation = { link = "CopilotLabel" },
 	CopilotSuggestion = { link = "CopilotLabel" },
 
@@ -281,7 +277,7 @@ return {
 	--
 
 	TelescopeNormal = { link = "NormalFloat" },
-	TelescopeSelection = { fg = c.foilage_70, bg = c.foilage_30 },
+	TelescopeSelection = { fg = s.fg_selection, bg = s.bg_selection },
 	-- TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
 	-- TelescopeNormal = { fg = c.fg, bg = c.bg_float },
 	-- TelescopePromptBorder = { fg = c.orange, bg = c.bg_float },
@@ -302,7 +298,7 @@ return {
 	GitSignsAdd = { link = "DiffAdd" },
 	GitSignsChange = { link = "DiffChange" },
 	GitSignsDelete = { link = "DiffDelete" },
-	GitSignsCurrentLineBlame = { fg = s.fade_1 },
+	GitSignsCurrentLineBlame = { fg = s.fade_2 },
 
 	--
 	-- diff
@@ -311,8 +307,8 @@ return {
 	diffAdded = { link = "DiffAdd" },
 	diffRemoved = { link = "DiffDelete" },
 	diffChanged = { link = "DiffChange" },
-	diffOldFile = { fg = c.lorikeet_b_70 },
-	diffNewFile = { fg = c.lorikeet_g_70 },
+	diffOldFile = { fg = s.diff },
+	diffNewFile = { fg = s.same },
 
 	--
 	-- LSP and diagnostics
