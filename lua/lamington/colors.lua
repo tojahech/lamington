@@ -59,10 +59,11 @@ colors.semantic_colors = {
 	foreground_highlighted_2 = c.waterfalls_60,
 	foreground_highlighted_3 = c.foilage_50,
 	foreground_highlighted_4 = c.sunray_60,
+	foreground_highlighted_5 = c.lorikeet_r_70,
 
 	foreground_faded_1 = c.canopy_20,
 	foreground_faded_2 = c.soil_50,
-	foreground_faded_3 = c.waterfalls_60,
+	foreground_faded_3 = c.soil_70,
 
 	--
 	-- menus, sidebars, panels, etc

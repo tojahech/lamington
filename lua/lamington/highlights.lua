@@ -109,13 +109,13 @@ return {
 	Boolean = { link = "Normal" },
 
 	Identifier = { fg = s.foreground_highlighted_1, bold = true },
-	Parameter = { fg = s.foreground, italic = true },
+	Parameter = { fg = s.foreground_highlighted_1, bold = true },
 
 	Function = { fg = s.foreground_highlighted_2, bold = true },
 	["@function"] = { link = "Function" },
 	["@function.call"] = { fg = s.foreground_highlighted_2 },
 
-	Keyword = { fg = s.foreground_highlighted_3, bold = true },
+	Keyword = { fg = s.foreground_highlighted_5, bold = true },
 
 	Conditional = { link = "Keyword" },
 	Repeat = { link = "Keyword" },
@@ -124,13 +124,13 @@ return {
 	Exception = { link = "Keyword" },
 	Operator = { fg = s.foreground_highlighted_3 },
 
-	PreProc = { fg = s.foreground_highlighted_3 },
+	PreProc = { fg = s.foreground_highlighted_1, bold = true },
 	-- Include = { fg = c["re"], bg = "NONE" },
 	-- Define = { fg = c["ma"], bg = "NONE" },
 	-- Macro = { fg = c["ma"], bg = "NONE" },
 	-- PreCondit = { fg = c["ma"], bg = "NONE" },
 
-	Type = { fg = s.foreground_highlighted_1 },
+	Type = { fg = s.foreground },
 	-- ["@type"] = { link = "Type" },
 	-- ["@type"] = { fg = s.foreground_highlighted_1, bold = false },
 	-- ["@type.builtin"] = { link = "Type" },
@@ -187,7 +187,7 @@ return {
 	-- ["@keyword.coroutine"] = { link = "Normal" },
 	-- ["@keyword.function"] = { link = "Normal" },
 	-- ["@keyword.operator"] = { link = "Normal" },
-	-- ["@keyword.import"] = { link = "Normal" },
+	["@keyword.import"] = { fg = s.foreground_highlighted_4 },
 	-- ["@keyword.type"] = { link = "Normal" },
 	-- ["@keyword.modifier"] = { link = "Normal" },
 	-- ["@keyword.repeat"] = { link = "Normal" },
@@ -301,7 +301,7 @@ return {
 	GitSignsAdd = { link = "DiffAdd" },
 	GitSignsChange = { link = "DiffChange" },
 	GitSignsDelete = { link = "DiffDelete" },
-	GitSignsCurrentLineBlame = { fg = s.foreground_faded_2 },
+	GitSignsCurrentLineBlame = { fg = s.foreground_faded_2, bold = true },
 
 	--
 	-- diff
@@ -334,10 +334,10 @@ return {
 	DiagnosticSignInfo = { fg = s.info },
 	DiagnosticSignHint = { fg = s.hint },
 
-	DiagnosticVirtualTextError = { fg = s.foreground_faded_1 },
-	DiagnosticVirtualTextWarn = { fg = s.foreground_faded_1 },
-	DiagnosticVirtualTextInfo = { fg = s.foreground_faded_1 },
-	DiagnosticVirtualTextHint = { fg = s.foreground_faded_1 },
+	DiagnosticVirtualTextError = { fg = s.foreground_faded_2 },
+	DiagnosticVirtualTextWarn = { fg = s.foreground_faded_2 },
+	DiagnosticVirtualTextInfo = { fg = s.foreground_faded_2 },
+	DiagnosticVirtualTextHint = { fg = s.foreground_faded_2 },
 
 	DiagnosticUnderlineError = { undercurl = true, sp = s.error },
 	DiagnosticUnderlineWarn = { undercurl = true, sp = s.warning },
