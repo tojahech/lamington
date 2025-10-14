@@ -52,13 +52,13 @@ colors.semantic_colors = {
 	background = c.shadow_20,
 	background_selection = c.canopy_60,
 
-	foreground = c.canopy_40,
+	foreground = c.canopy_60,
 	foreground_selection = c.canopy_20,
 
-	foreground_highlighted_1 = c.waterfalls_60,
-	foreground_highlighted_2 = c.canopy_60,
-	foreground_highlighted_3 = c.sunray_60,
-	foreground_highlighted_4 = c.foilage_50,
+	foreground_highlighted_1 = c.canopy_40,
+	foreground_highlighted_2 = c.waterfalls_60,
+	foreground_highlighted_3 = c.foilage_50,
+	foreground_highlighted_4 = c.sunray_60,
 
 	foreground_faded_1 = c.canopy_20,
 	foreground_faded_2 = c.soil_50,
