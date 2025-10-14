@@ -7,23 +7,23 @@ return {
 	-- Text
 	--
 
-	Normal = { fg = s.fg, bg = s.bg }, -- Normal text
-	NormalNC = { bg = s.bg_alt }, -- Normal text in inactive windows
-	Title = { fg = s.fg_alt }, -- Titles for things like the help window, autocomplete box, etc.
+	Normal = { fg = s.foreground, bg = s.background }, -- Normal text
+	NormalNC = { bg = s.panel_background }, -- Normal text in inactive windows
+	Title = { fg = s.panel_foreground }, -- Titles for things like the help window, autocomplete box, etc.
 	Underlined = { underline = true }, -- Meta, underlined text
 	Bold = { bold = true }, -- Meta, bold text
 	Italic = { italic = true }, -- Meta, italic text
-	NonText = { fg = s.fade_1 }, -- Characters that don't really exist like soft linebreaks
-	Conceal = { fg = s.fade_2 }, -- Placeholder characters substituted for concealed text
+	NonText = { fg = s.foreground_faded_1 }, -- Characters that don't really exist like soft linebreaks
+	Conceal = { fg = s.foreground_faded_2 }, -- Placeholder characters substituted for concealed text
 
 	--
 	-- Selections
 	--
 
-	Cursor = { fg = s.fg_selection, bg = s.bg_selection }, -- Highlights current cursor position
+	Cursor = { fg = s.foreground_selection, bg = s.background_selection }, -- Highlights current cursor position
 	MatchParen = { link = "Cursor" }, -- Parenthesis matching the one under the cursor
 
-	Search = { fg = s.fg_selection, bg = s.bg_selection }, -- Last search pattern
+	Search = { fg = s.foreground_selection, bg = s.background_selection }, -- Last search pattern
 	IncSearch = { link = "Search" }, -- Search pattern as you type
 	Substitute = { link = "Search" }, -- Highlight for :s///c
 
@@ -31,43 +31,43 @@ return {
 	-- Structures
 	--
 
-	Visual = { fg = s.fg_selection, bg = s.bg_selection }, -- Visual mode selection
+	Visual = { fg = s.foreground_selection, bg = s.background_selection }, -- Visual mode selection
 
-	VertSplit = { fg = s.scaffold }, -- Separator between vertical splits
-	WinSeparator = { fg = s.scaffold }, -- Separator between horizontal splits
+	VertSplit = { fg = s.scaffold_2 }, -- Separator between vertical splits
+	WinSeparator = { fg = s.scaffold_2 }, -- Separator between horizontal splits
 
-	LineNr = { fg = s.scaffold }, -- Line number column
+	LineNr = { fg = s.scaffold_2 }, -- Line number column
 	SignColumn = { link = "LineNr" }, -- Column where signs are displayed
 	EndOfBuffer = { fg = "NONE", bg = "NONE" }, -- ~ lines at the end of a buffer
 	ColorColumn = { link = "LineNr" }, -- color for columns highlighted with cc
 
-	Folded = { fg = s.fg_alt, bg = s.bg_alt }, -- Line color for collapsed folds
-	FoldColumn = { fg = s.fg_alt, bg = s.bg_alt }, -- Column in the sign column used for fold markers
+	Folded = { fg = s.panel_foreground, bg = s.panel_background }, -- Line color for collapsed folds
+	FoldColumn = { fg = s.panel_foreground, bg = s.panel_background }, -- Column in the sign column used for fold markers
 
 	--
 	-- Interface
 	--
 
-	StatusLine = { fg = s.fg_alt, bg = s.bg_alt }, -- Status line of current window
-	StatusLineNC = { fg = s.fg_alt, bg = s.bg_alt }, -- Status line of non-current windows
+	StatusLine = { fg = s.panel_foreground, bg = s.panel_background }, -- Status line of current window
+	StatusLineNC = { fg = s.panel_foreground, bg = s.panel_background }, -- Status line of non-current windows
 
 	TabLine = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, inactive tabs
 	TabLineFill = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, empty space
 	TabLineSel = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, active tab
 
-	NormalFloat = { fg = s.fg_modal, bg = s.bg_modal }, -- Normal text in floating windows
+	NormalFloat = { fg = s.modal_foreground, bg = s.modal_background }, -- Normal text in floating windows
 	FloatBorder = { fg = s.scaffold_3 }, -- Border of floating windows
-	FloatTitle = { fg = s.fg_selection }, -- Title of floating windows
-	FloatFooter = { fg = s.fg_selection }, -- Footer of floating windows
+	FloatTitle = { fg = s.foreground_selection }, -- Title of floating windows
+	FloatFooter = { fg = s.foreground_selection }, -- Footer of floating windows
 
-	Pmenu = { fg = s.fg_modal, bg = s.bg_modal }, -- popup menu normal item
-	PmenuSel = { fg = s.fg_selection, bg = s.bg_selection }, -- popup menu selected item
-	PmenuSbar = { bg = s.bg_modal }, -- popup menu scrollbar
-	PmenuThumb = { bg = s.bg_selection }, -- Current location indicator in popup menus
+	Pmenu = { fg = s.modal_foreground, bg = s.modal_background }, -- popup menu normal item
+	PmenuSel = { fg = s.foreground_selection, bg = s.background_selection }, -- popup menu selected item
+	PmenuSbar = { bg = s.modal_background }, -- popup menu scrollbar
+	PmenuThumb = { bg = s.background_selection }, -- Current location indicator in popup menus
 
-	QuickFixLine = { fg = s.fg_selection, bg = s.bg_selection }, -- Current line in the quickfix window
+	QuickFixLine = { fg = s.foreground_selection, bg = s.background_selection }, -- Current line in the quickfix window
 	Question = { fg = c.lorikeet_b_70 }, -- prompts and yes/no questions
-	Directory = { fg = s.fg_alt, bg = s.bg_alt }, -- Directory names
+	Directory = { fg = s.panel_foreground, bg = s.panel_background }, -- Directory names
 
 	--
 	-- Status and messages
@@ -97,39 +97,39 @@ return {
 	-- Syntax highlighting
 	--
 
-	Comment = { fg = s.fade_1, italic = true },
+	Comment = { fg = s.foreground_faded_1, italic = true },
 	SpecialComment = { bold = true },
 	-- Whitespace = {},
 
 	Constant = { link = "Normal" },
-	String = { fg = s.highlight_1 },
-	Character = { fg = s.highlight_1 },
-	Number = { fg = s.highlight_1 },
-	Float = { fg = s.highlight_1 },
-	Boolean = { fg = s.highlight_1 },
+	String = { fg = s.foreground_highlighted_1 },
+	Character = { fg = s.foreground_highlighted_1 },
+	Number = { fg = s.foreground_highlighted_1 },
+	Float = { fg = s.foreground_highlighted_1 },
+	Boolean = { fg = s.foreground_highlighted_1 },
 
 	Identifier = { link = "Normal" },
-	Parameter = { fg = s.fg, italic = true },
+	Parameter = { fg = s.foreground, italic = true },
 
-	Function = { fg = s.fg, bold = true },
+	Function = { fg = s.foreground, bold = true },
 
-	Keyword = { fg = s.highlight_4, bold = true },
+	Keyword = { fg = s.foreground_highlighted_4, bold = true },
 	Conditional = { link = "Keyword" },
 	Repeat = { link = "Keyword" },
 	Label = { link = "Keyword" },
 	Statement = { link = "Keyword" },
 	Exception = { link = "Keyword" },
-	Operator = { fg = s.highlight_4 },
+	Operator = { fg = s.foreground_highlighted_4 },
 
-	PreProc = { fg = s.highlight_4 },
+	PreProc = { fg = s.foreground_highlighted_4 },
 	-- Include = { fg = c["re"], bg = "NONE" },
 	-- Define = { fg = c["ma"], bg = "NONE" },
 	-- Macro = { fg = c["ma"], bg = "NONE" },
 	-- PreCondit = { fg = c["ma"], bg = "NONE" },
 
-	Type = { fg = s.highlight_1, bold = true },
+	Type = { fg = s.foreground_highlighted_1, bold = true },
 	Typedef = { link = "Type" },
-	Structure = { fg = s.highlight_3 },
+	Structure = { fg = s.foreground_highlighted_3 },
 
 	Special = { fg = s.highlight_4 },
 	-- SpecialChar = { fg = c["ma"], bg = "NONE" },
@@ -171,8 +171,8 @@ return {
 	-- ["@variable.parameter.builtin"] = { link = "Normal" },
 	-- ["@variable.member"] = { link = "Normal" },
 	["@function"] = { link = "Function" },
-	-- ["@function.builtin"] = { link = "Normal" },
 	-- ["@function.call"] = { link = "Normal" },
+	-- ["@function.builtin"] = { link = "Normal" },
 	-- ["@function.macro"] = { link = "Normal" },
 	-- ["@function.method"] = { link = "Normal" },
 	-- ["@function.method.call"] = { link = "Normal" },
@@ -217,7 +217,7 @@ return {
 	-- ["@markup.strikethrough"] = { link = "Normal" },
 	-- ["@markup.underline"] = { link = "Underlined" },
 
-	["@markup.heading"] = { fg = s.highlight_2 },
+	["@markup.heading"] = { fg = s.foreground_highlighted_2 },
 	-- ["@markup.heading.1"] = { link = "Normal" },
 	-- ["@markup.heading.2"] = { link = "Normal" },
 	-- ["@markup.heading.3"] = { link = "Normal" },
@@ -227,11 +227,11 @@ return {
 	["@markup.quote"] = { link = "Normal" },
 	["@markup.math"] = { link = "Normal" },
 
-	["@markup.link"] = { fg = s.highlight_4 },
+	["@markup.link"] = { fg = s.foreground_highlighted_4 },
 	-- ["@markup.link.label"] = { fg = s.highlight_4 },
 	-- ["@markup.link.url"] = { fg = s.highlight_4 },
 
-	["@markup.raw"] = { fg = s.highlight_3 },
+	["@markup.raw"] = { fg = s.foreground_highlighted_3 },
 	["@markup.raw.block"] = { link = "Normal" },
 
 	["@markup.list"] = { link = "Normal" },
@@ -260,7 +260,7 @@ return {
 	-- copilot
 	--
 
-	CopilotLabel = { fg = s.fade_3 },
+	CopilotLabel = { fg = s.foreground_faded_3 },
 	CopilotAnnotation = { link = "CopilotLabel" },
 	CopilotSuggestion = { link = "CopilotLabel" },
 
@@ -268,7 +268,7 @@ return {
 	-- Indent Blankline
 	--
 
-	IblWhitespace = { fg = s.scaffold_dark },
+	IblWhitespace = { fg = s.scaffold_1 },
 	IblIndent = { link = "IblWhitespace" },
 	IblScope = { link = "IblWhitespace" },
 
@@ -277,7 +277,7 @@ return {
 	--
 
 	TelescopeNormal = { link = "NormalFloat" },
-	TelescopeSelection = { fg = s.fg_selection, bg = s.bg_selection },
+	TelescopeSelection = { fg = s.foreground_selection, bg = s.background_selection },
 	-- TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
 	-- TelescopeNormal = { fg = c.fg, bg = c.bg_float },
 	-- TelescopePromptBorder = { fg = c.orange, bg = c.bg_float },
@@ -298,7 +298,7 @@ return {
 	GitSignsAdd = { link = "DiffAdd" },
 	GitSignsChange = { link = "DiffChange" },
 	GitSignsDelete = { link = "DiffDelete" },
-	GitSignsCurrentLineBlame = { fg = s.fade_2 },
+	GitSignsCurrentLineBlame = { fg = s.foreground_faded_2 },
 
 	--
 	-- diff
@@ -331,10 +331,10 @@ return {
 	DiagnosticSignInfo = { fg = s.info },
 	DiagnosticSignHint = { fg = s.hint },
 
-	DiagnosticVirtualTextError = { fg = s.fade_1 },
-	DiagnosticVirtualTextWarn = { fg = s.fade_1 },
-	DiagnosticVirtualTextInfo = { fg = s.fade_1 },
-	DiagnosticVirtualTextHint = { fg = s.fade_1 },
+	DiagnosticVirtualTextError = { fg = s.foreground_faded_1 },
+	DiagnosticVirtualTextWarn = { fg = s.foreground_faded_1 },
+	DiagnosticVirtualTextInfo = { fg = s.foreground_faded_1 },
+	DiagnosticVirtualTextHint = { fg = s.foreground_faded_1 },
 
 	DiagnosticUnderlineError = { undercurl = true, sp = s.error },
 	DiagnosticUnderlineWarn = { undercurl = true, sp = s.warning },

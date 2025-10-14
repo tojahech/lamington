@@ -45,36 +45,46 @@ local c = colors.named_colors
 
 colors.semantic_colors = {
 
-	-- primary text and background
-	bg = c.shadow_20,
-	fg = c.canopy_40,
+	--
+	-- main content areas
+	--
 
-	-- secondary text and background, used for surrounding elements like menus, sidebars, panels, etc
-	bg_alt = c.shadow_10,
-	fg_alt = c.canopy_20,
+	background = c.shadow_20,
+	background_selection = c.canopy_60,
 
-	-- alternative text and background, used for floating elements like pop-ups, dialogues and modals
-	bg_modal = c.shadow_30,
-	fg_modal = c.canopy_40,
+	foreground = c.canopy_40,
+	foreground_selection = c.canopy_20,
 
-	-- alternative text and background, used for selected or focused elements
-	bg_selection = c.canopy_60,
-	fg_selection = c.canopy_20,
+	foreground_highlighted_1 = c.waterfalls_60,
+	foreground_highlighted_2 = c.canopy_60,
+	foreground_highlighted_3 = c.sunray_60,
+	foreground_highlighted_4 = c.foilage_50,
 
-	-- highlight elements and text that should stand out
-	highlight_1 = c.canopy_60,
-	highlight_2 = c.waterfalls_60,
-	highlight_3 = c.sunray_60,
-	highlight_4 = c.foilage_50,
+	foreground_faded_1 = c.canopy_20,
+	foreground_faded_2 = c.soil_50,
+	foreground_faded_3 = c.waterfalls_60,
 
-	-- de-emphasise elements and text that should fade into the background
-	fade_1 = c.canopy_20,
-	fade_2 = c.soil_50,
-	fade_3 = c.waterfalls_60,
+	--
+	-- menus, sidebars, panels, etc
+	--
 
-	-- visual scaffolding like borders, dividers, etc.
-	scaffold = c.soil_70,
-	scaffold_dark = c.soil_50,
+	panel_background = c.shadow_10,
+	panel_foreground = c.canopy_20,
+
+	--
+	-- pop-ups, dialogues, modals, etc
+	--
+
+	modal_background = c.shadow_30,
+	modal_foreground = c.canopy_40,
+
+	--
+	-- visual scaffolding
+	--
+
+	-- borders, dividers, etc
+	scaffold_1 = c.soil_50,
+	scaffold_2 = c.soil_70,
 	scaffold_3 = c.shadow_30,
 
 	-- status indicators
