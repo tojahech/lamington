@@ -45,13 +45,13 @@ colors.named_colors = {
 colors.maurice = {
 	whisper_white = "#ebe9e0",
 
-	double_bass = "#3c3538",
-	meercat = "#514439",
-	white_duck = "#cfcabb",
-
 	marais = "#403d41",
 	teahouse = "#666966",
 	dieskau = "#cbc9c5",
+
+	double_bass = "#3c3538",
+	meercat = "#514439",
+	white_duck = "#cfcabb",
 
 	equatorial_forest = "#71845e",
 	lady_fern = "#90a073",
@@ -60,6 +60,18 @@ colors.maurice = {
 	wishard = "#527769",
 	silent_sage = "#729986",
 	diorite = "#9cbfaf",
+
+	angry_ocean = "#4e6563",
+	classic_calm = "#6a8783",
+	duck_egg_blue = "#97b2b0",
+
+	alpha_centuri = "#4d5878",
+	quantum_blue = "#6d7a9b",
+	grey_flannel = "#98a5c2",
+
+	baltic = "#39505f",
+	oceanic = "#4f6f81",
+	post_boy = "#7a9bad",
 
 	berry_smoothie = "#885362",
 	never_forget = "#a67284",
@@ -73,16 +85,13 @@ colors.maurice = {
 	italian_clay = "#d69579",
 	diva_rouge = "#e7b7a4",
 
-	alpha_centuri = "#4d5878",
-	quantum_blue = "#6d7a9b",
-	grey_flannel = "#98a5c2",
-
-	baltic = "#39505f",
-	oceanic = "#4f6f81",
-	post_boy = "#7a9bad",
-
 	splendid_coral = "#c9706a",
+	coral_atoll = "#dc8f8d",
+	pretty_pink = "#eab2b3",
+
 	camellia = "#a85c60",
+	pleasure = "#c17c83",
+	prom = "#d9a5ac",
 }
 
 local c = colors.named_colors
@@ -146,4 +155,64 @@ colors.semantic_colors = {
 	same = c.lorikeet_b_70,
 }
 
+local m = colors.maurice
+
+colors.maurice_semantic_colors = {
+
+	--
+	-- main content areas
+	--
+
+	background = m.whisper_white,
+	background_selection = m.whisper_white,
+
+	foreground = m.double_bass,
+	foreground_selection = m.meercat,
+
+	foreground_highlighted_1 = m.lady_fern,
+	foreground_highlighted_2 = m.raw_umber,
+	foreground_highlighted_3 = m.alpha_centuri,
+	foreground_highlighted_4 = m.silent_sage,
+	foreground_highlighted_5 = m.never_forget,
+
+	foreground_faded_1 = m.grey_flannel,
+	foreground_faded_2 = m.lama,
+	foreground_faded_3 = m.dieskau,
+
+	--
+	-- menus, sidebars, panels, etc
+	--
+
+	panel_background = m.dieskau,
+	panel_foreground = m.marais,
+
+	--
+	-- pop-ups, dialogues, modals, etc
+	--
+
+	modal_background = m.garden_pond,
+	modal_foreground = m.equatorial_forest,
+
+	--
+	-- visual scaffolding
+	--
+
+	-- borders, dividers, etc
+	scaffold_1 = m.baltic,
+	scaffold_2 = m.oceanic,
+	scaffold_3 = m.post_boy,
+
+	-- status indicators
+	ok = m.diorite,
+	error = m.splendid_coral,
+	warning = m.strawberry_mousse,
+	info = m.cinnamon_sand,
+	hint = m.garden_pond,
+
+	-- change indicators
+	plus = m.diorite,
+	minus = m.splendid_coral,
+	diff = m.strawberry_mousse,
+	same = m.cinnamon_sand,
+}
 return colors
