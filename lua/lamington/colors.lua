@@ -41,6 +41,50 @@ colors.named_colors = {
 	lorikeet_y_70 = "#fef769",
 }
 
+-- Dulux paint swatches from my house!
+colors.maurice = {
+	whisper_white = "#ebe9e0",
+
+	double_bass = "#3c3538",
+	meercat = "#514439",
+	white_duck = "#cfcabb",
+
+	marais = "#403d41",
+	teahouse = "#666966",
+	dieskau = "#cbc9c5",
+
+	equatorial_forest = "#71845e",
+	lady_fern = "#90a073",
+	garden_pond = "#afc09d",
+
+	wishard = "#527769",
+	silent_sage = "#729986",
+	diorite = "#9cbfaf",
+
+	berry_smoothie = "#885362",
+	never_forget = "#a67284",
+	strawberry_mousse = "#c69eaf",
+
+	cinnamon_sand = "#b77e53",
+	raw_umber = "#cc996a",
+	lama = "#dfb995",
+
+	terracotta_chip = "#c4795d",
+	italian_clay = "#d69579",
+	diva_rouge = "#e7b7a4",
+
+	alpha_centuri = "#4d5878",
+	quantum_blue = "#6d7a9b",
+	grey_flannel = "#98a5c2",
+
+	baltic = "#39505f",
+	oceanic = "#4f6f81",
+	post_boy = "#7a9bad",
+
+	splendid_coral = "#c9706a",
+	camellia = "#a85c60",
+}
+
 local c = colors.named_colors
 
 colors.semantic_colors = {
