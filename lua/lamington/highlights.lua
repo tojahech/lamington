@@ -1,5 +1,5 @@
 local c = require("lamington.colors").named_colors
-local s = require("lamington.colors").semantic_colors
+local s = require("lamington.colors").maurice_semantic_colors
 
 return {
 
@@ -51,9 +51,9 @@ return {
 	StatusLine = { fg = s.panel_foreground, bg = s.panel_background }, -- Status line of current window
 	StatusLineNC = { fg = s.panel_foreground, bg = s.panel_background }, -- Status line of non-current windows
 
-	TabLine = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, inactive tabs
-	TabLineFill = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, empty space
-	TabLineSel = { fg = c.canopy_40, bg = c.shadow_30 }, -- Tab line, active tab
+	TabLine = { fg = s.modal_foreground, bg = s.modal_background }, -- Tab line, inactive tabs
+	TabLineFill = { fg = s.modal_foreground, bg = s.modal_background }, -- Tab line, empty space
+	TabLineSel = { fg = s.modal_foreground, bg = s.modal_background }, -- Tab line, active tab
 
 	NormalFloat = { fg = s.modal_foreground, bg = s.modal_background }, -- Normal text in floating windows
 	FloatBorder = { fg = s.scaffold_3 }, -- Border of floating windows
@@ -66,7 +66,7 @@ return {
 	PmenuThumb = { bg = s.background_selection }, -- Current location indicator in popup menus
 
 	QuickFixLine = { fg = s.foreground_selection, bg = s.background_selection }, -- Current line in the quickfix window
-	Question = { fg = c.lorikeet_b_70 }, -- prompts and yes/no questions
+	Question = { fg = s.hint }, -- prompts and yes/no questions
 	Directory = { fg = s.panel_foreground, bg = s.panel_background }, -- Directory names
 
 	--
